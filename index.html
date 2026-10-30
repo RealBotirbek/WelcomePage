@@ -62,67 +62,19 @@ p{margin:0}
 .top nav{display:flex;align-items:center;gap:27px;margin-left:auto}
 .top nav a{color:var(--nav);font-size:.95rem;font-weight:500;text-decoration:none;transition:color .2s}
 .top nav a:hover{color:var(--blue)}
-
-.top-actions {
-  margin-left: auto;
-  gap: 14px;
-}
-
-.main-page-btn {
-  gap: 9px;
-  min-height: 42px;
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-.main-page-btn svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.main-page-btn:hover {
-  box-shadow: 0 8px 22px rgba(0, 136, 255, 0.25);
-}
+.top-actions {margin-left: auto;gap: 14px;}
+.main-page-btn {gap: 9px;min-height: 42px;padding: 10px 16px;border-radius: 10px;font-size: 0.9rem;white-space: nowrap;}
+.main-page-btn svg {width: 18px;height: 18px;fill: none;stroke: currentColor;stroke-width: 1.8;stroke-linecap: round;stroke-linejoin: round;}
+.main-page-btn:hover {box-shadow: 0 8px 22px rgba(0, 136, 255, 0.25);}
 
 @media (max-width: 420px) {
-  .main-page-btn {
-    min-height: 38px;
-    padding: 8px 11px;
-    font-size: 0.82rem;
-  }
-
-  .main-page-btn svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .top {
-    padding-inline: 16px;
-  }
-
-  .brand {
-    gap: 6px;
-    font-size: 1.15rem;
-  }
-
-  .brand img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .top-actions {
-    margin-left: auto;
-    gap: 24px;
-  }
+  .main-page-btn {min-height: 38px;padding: 8px 11px;font-size: 0.82rem;}
+  .main-page-btn svg {width: 16px;height: 16px;}
+  .top {padding-inline: 16px;}
+  .brand {gap: 6px;font-size: 1.15rem;}
+  .brand img {width: 30px;height: 30px;}
+  .top-actions {margin-left: auto;gap: 24px;}
 }
-
 
 /* Theme switch: sun sits on the left slot, moon on the right slot; the blue knob slides under the active one */
 .theme-input{position:absolute;opacity:0;pointer-events:none}
@@ -149,12 +101,14 @@ p{margin:0}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;min-height:650px;background:radial-gradient(circle at 80% 20%,rgba(80,200,120,.15),transparent 30%),linear-gradient(135deg,var(--hero-from) 0%,var(--bg) 60%)}
-.hero-copy{align-self:center;padding:90px var(--gutter) 100px;max-width:850px}
+.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;min-height:650px;background:radial-gradient(circle at 80% 20%,rgba(80,200,120,.15),transparent 30%),linear-gradient(135deg,var(--hero-from) 0%,var(--bg) 60%)}
+.hero-copy {align-self: center;padding: 90px 40px 100px var(--gutter);max-width: none;min-width: 0}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;color:var(--blue);font-size:.88rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em}
 .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
-.hero h1{max-width:720px;font-size:clamp(3rem,6vw,5.8rem)}
-.hero h1 span{color:var(--blue); display: block;}
+.hero h1 {max-width: none;font-size: clamp(2.5rem, 4.2vw, 4.5rem);}
+.hero h1 span {display: block;white-space: nowrap;}
+.hero-title-blue {color: var(--blue);}
+.hero-title-black {color: #101828;}
 .lead{max-width:610px;margin-top:28px;color:var(--lead);font-size:1.2rem;line-height:1.7}
 .hero .actions{margin-top:34px}
 .hero-note{display:flex;align-items:center;gap:10px;margin-top:24px;color:var(--muted);font-size:.92rem}
@@ -330,7 +284,10 @@ footer nav a{color:var(--nav);font-size:.9rem;font-weight:500;text-decoration:no
 <section class="hero">
   <div class="hero-copy">
     <div class="eyebrow">Learning Center Management System</div>
-    <h1><span>The better system,</span>The better education</h1>
+    <h1>
+      <span class="hero-title-blue">The better system</span>
+      <span class="hero-title-black">The better education</span>
+    </h1>
     <p class="lead">EdTrack brings courses, groups, schedules, attendance, assessments, mentor support and student rewards into one simple platform.</p>
     <div class="actions">
       <a class="btn btn-solid" href="#features">Explore EdTrack</a>
